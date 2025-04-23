@@ -1,0 +1,25 @@
+.modal-buttons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.create-button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2d336b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .context-menu .filter-dropdown {
+    right: 0px;
+  }
+}

@@ -1,0 +1,138 @@
+.file-drop-area {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.file-drop-area:hover {
+  background-color: #f1f1f1;
+}
+
+.hidden-file-input {
+  display: none;
+}
+.upload-icon-preview {
+  justify-items: center;
+}
+.upload-icon-preview img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.upload-icon-preview p {
+  font-size: 14px;
+  color: #666;
+}
+
+.modal-buttons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.create-button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2d336b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.file-drop-area {
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.upload-icon-preview img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.upload-icon-preview p {
+  font-size: 14px;
+  color: #666;
+}
+
+.upload-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem 1rem;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.file-info img {
+  width: 40px;
+  height: 40px;
+}
+
+.file-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.file-size {
+  font-size: 13px;
+  color: #777;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: limegreen;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 13px;
+  text-align: right;
+  color: #444;
+}

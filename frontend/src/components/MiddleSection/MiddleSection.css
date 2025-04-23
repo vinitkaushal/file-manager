@@ -1,0 +1,241 @@
+.table-container {
+  width: 100%;
+}
+
+.middle-section-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  font-size: 14px;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.middle-section-table th,
+.middle-section-table td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.middle-section-table thead {
+  background-color: #d9e6f5;
+  font-weight: 600;
+}
+
+.middle-section-table tbody tr {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Rounded borders */
+.middle-section-table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.middle-section-table tbody tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+
+.middle-section-table th:nth-child(1),
+.middle-section-table td:nth-child(1) {
+  width: 30%;
+  max-width: 30%;
+}
+
+.middle-section-table th:nth-child(2),
+.middle-section-table td:nth-child(2) {
+  width: 35%;
+  max-width: 35%;
+}
+
+.middle-section-table th:nth-child(3),
+.middle-section-table td:nth-child(3),
+.middle-section-table th:nth-child(4),
+.middle-section-table td:nth-child(4) {
+  width: 15%;
+  max-width: 15%;
+}
+
+.middle-section-table th:nth-child(5),
+.middle-section-table td:nth-child(5) {
+  width: 5%;
+  text-align: end;
+  overflow: visible;
+}
+.middle-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle-toggle-icon {
+  width: 6px;
+  height: 9px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.middle-toggle-btn.expanded .middle-toggle-icon {
+  transform: rotate(90deg);
+}
+
+/* Folder icon and serial number */
+.middle-serial-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.middle-serial {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fcd34d;
+  color: #000;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.middle-folder-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.middle-dropdown-icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+/* Dropdown */
+.middle-folder-options {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.middle-folder-options .dropdown {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 9999;
+  font-size: 13px;
+  text-align: left;
+}
+
+.middle-folder-options .dropdown div {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.middle-folder-options .dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+.middle-indent {
+  padding-left: 1.5rem;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #4f6fd3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #3e59b0;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+.pagination-controls span {
+  font-weight: 600;
+  color: #333;
+}
+
+.middle-layout {
+  display: flex;
+  gap: 1rem;
+}
+
+.left-pane {
+  flex: 2;
+}
+
+.right-pane {
+  flex: 1;
+  max-width: 600px;
+  height: 600px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.no-record {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .middle-section-table th:nth-child(3),
+  .middle-section-table th:nth-child(4),
+  .middle-section-table td:nth-child(3),
+  .middle-section-table td:nth-child(4) {
+    display: none;
+  }
+}

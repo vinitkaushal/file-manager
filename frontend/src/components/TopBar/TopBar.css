@@ -1,0 +1,14 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  box-shadow: 1px 1px 2px 0px #0000001a;
+}
+
+.top-bar .context-menu {
+  display: flex;
+  gap: 0.5rem;
+}

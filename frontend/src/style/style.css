@@ -1,0 +1,59 @@
+input[type="text"],
+input[type="date"] {
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: -webkit-fill-available;
+}
+
+label {
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.cancel-button {
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dddddd;
+}
+
+hr {
+  border: 1px solid #dddddd !important;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.wrap-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.disable-button {
+  opacity: 0.5;
+}

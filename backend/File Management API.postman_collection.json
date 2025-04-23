@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "6208866f-234c-44ef-90dc-87fe4631648c",
+		"name": "File Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27619791"
+	},
+	"item": [
+		{
+			"name": "Folders",
+			"item": [
+				{
+					"name": "Create Folder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New Folder\",\n  \"description\": \"A folder for reports\",\n  \"parent\": \"68089edeae9f6b4f7273c583\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/folders/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"folders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Folder",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Folder Name\",\n  \"description\": \"Updated description\",\n  \"parent\":\"68089edeae9f6b4f7273c583\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/folders/edit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"folders",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Folder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/folders/delete/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"folders",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "parentFolderId"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "folder",
+									"value": "null",
+									"description": "parentFolderId",
+									"type": "text"
+								},
+								{
+									"key": "isParentFile",
+									"value": "false",
+									"description": "true if parentFolderId is not present false when parentFolderId is present",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/files/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/files/view/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"view",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "parentFolderId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SSE - Upload Progress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/files/progress",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"progress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete File",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/files/delete/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"files",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "parentFolderId"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get All Files and Folder",
+			"item": [
+				{
+					"name": "Get Folder and File Hierarchy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": 1,\n  \"limit\": 2,\n  \"name\": \"project\",\n  \"description\": \"finance\",\n  \"date\": \"2025-04-21\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/getFilesAndFolders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"getFilesAndFolders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "{{base_url}}"
+		}
+	]
+}

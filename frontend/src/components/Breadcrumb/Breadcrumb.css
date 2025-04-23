@@ -1,0 +1,33 @@
+/* Breadcrumb.css */
+.breadcrumb {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.breadcrumb li {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin-left: 0.5rem;
+  color: #a9b5df;
+}
+
+.breadcrumb li:last-child::after {
+  content: "";
+}

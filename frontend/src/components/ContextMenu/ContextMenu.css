@@ -1,0 +1,102 @@
+.context-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.context-menu .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  z-index: 10;
+  width: 150px;
+  border-width: 1px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0px #0000001a;
+}
+.context-menu .filter-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 57px;
+  background: white;
+  z-index: 10;
+  width: 375px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0px #0000001a;
+}
+
+.context-menu .dropdown div {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.context-menu .dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+.plus-button,
+.filter-button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1.9rem;
+  cursor: pointer;
+  background-color: #2d336b;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #dddddd;
+  padding: 0.6rem 1rem;
+}
+.filter-body {
+  padding: 0px 16px 16px 16px;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.create-button {
+  padding: 0.5rem 1rem;
+  background-color: #2d336b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-close-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-inputs {
+  margin-top: 10px;
+}
