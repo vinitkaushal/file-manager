@@ -31,6 +31,8 @@ This is the backend service for the File Management System built using **Node.js
 - `utils/`: utility functions like sendProgress
 - `server.js`: main entry point
 
+Make sure to manually create the `uploads/` folder in the root directory.
+
 ## Getting Started
 
 1. Clone the repository:
